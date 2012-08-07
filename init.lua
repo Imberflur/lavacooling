@@ -13,6 +13,7 @@ minetest.register_node("lavacooling:moltenrock", {
 	paramtype = "light",
 	light_source = 10,
 	groups = {cracky=3, hot=3, igniter=1},
+		sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -30,6 +31,7 @@ minetest.register_node("lavacooling:obsidian", {
 	description = "Obsidian",
 	tiles = {"lavacooling_obsidian.png"},
 	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults(),
 	drop = {
 		max_items = 1,
 		items = {
