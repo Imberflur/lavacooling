@@ -1,5 +1,7 @@
 COOLING_RATE = 10
 IRON_FORMATION_RATE = 32
+--Molten rock takes 10 times longer to turn into stone than lava takes to turn into molten rock.
+COOlING_RATIO = 10
 
 --Nodes/Items/Fuels
 minetest.register_node("lavacooling:moltenrock", {
@@ -77,7 +79,7 @@ minetest.register_abm ({
 minetest.register_abm ({
 	nodenames = {"lavacooling:moltenrock"},
 	interval = 10.0,
-	chance = COOLING_RATE*30,
+	chance = COOLING_RATE*COOlING_RATIO*3,
 	action = function (pos)
 		minetest.env: add_node (pos, {name = "default:stone"})
 	end,
@@ -86,7 +88,7 @@ minetest.register_abm ({
 minetest.register_abm ({
 	nodenames = {"lavacooling:moltenrock"},
 	interval = 10.0,
-	chance = COOLING_RATE*IRON_FORMATION_RATE*30,
+	chance = COOLING_RATE*IRON_FORMATION_RATE*COOlING_RATIO*3,
 	action = function (pos)
 		minetest.env: add_node (pos, {name = "default:stone_with_iron"})
 	end,
