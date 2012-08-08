@@ -37,11 +37,11 @@ minetest.register_node("lavacooling:obsidian", {
 		items = {
 			{
 				items = {"lavacooling:obsidian_shard"},
-				rarity = 8,
+				rarity = 2,
 			},
 			{
 			items = {"lavacooling:obsidian"},
-			rarity = 32,
+			rarity = 8,
 			},
 		}
 	},
